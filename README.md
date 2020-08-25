@@ -33,6 +33,18 @@ cv2.imwrite('new_img.jpg', img)
 # second argument is the variable name in which the original image was loaded earlier.
 ```
 
+### Convert video feed to grayscale:  
+```python
+capture = cv2.VideoCapture(0);
+while capture.isOpened():
+    ret, frames = capture.read()
+    if ret:
+        gray = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
+        cv2.imshow('feed', gray)
+    else:
+        break
+```
+
 ### Record video:  
 ```python
 capture = cv2.VideoCapture(0);
@@ -43,4 +55,6 @@ while capture.isOpened():
     ret, frames = capture.read()
     if ret:
         out.write(frames)
+    else:
+        break
 ```
