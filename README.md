@@ -83,6 +83,14 @@ font = cv2.FONT_HERSHEY_SIMPLEX # font-style for the text
 img = cv2.putText(img, 'Dude', (200, 163), font, 4, (255,255,255), 5, cv2.LINE_4) # text on image
 ```
 
+### Add date-time to image:  
+```python
+import datetime
+font = cv2.FONT_HERSHEY_SIMPLEX
+datetime = str(datetime.datetime.now())
+img = cv2.putText(img, datetime, (10, 50), font, 2, (0,255,255), 2, cv2.LINE_4)
+```
+
 ### create a black image:  
 ```python
 img = np.zeros([512, 512, 3], np.uint8) # (height, width, 3), data_type
