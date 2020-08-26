@@ -13,9 +13,9 @@ def click_event(event, x, y, flags, params):
         
         
     if event == cv2.EVENT_RBUTTONDOWN:
-        blue = img[x, y, 0]
-        green = img[x, y, 1]
-        red = img[x, y, 2]
+        blue = img[y, x, 0]
+        green = img[y, x, 1]
+        red = img[y, x, 2]
         font = cv2.FONT_HERSHEY_SIMPLEX
         strBGR = str(blue) + ' ' + str(green) + ' ' + str(red)
         cv2.putText(img, strBGR, (x,y), font, 0.5, (255,0,105), 2)
