@@ -50,13 +50,24 @@ while capture.isOpened():
 capture = cv2.VideoCapture(0);
 fourcc = cv2.VideoWriter_fourcc(*'XVID') # fourcc code
 out = cv2.VideoWriter('record.avi', fourcc, 20.0, (640, 480))
-# 'record.avi' iis the created video file name, 20.0 is the frame-rate and (640,480) is the width-height tuple
+# 'record.avi' => video file name, 20.0 is the frame-rate and (640,480) is the width-height tuple
 while capture.isOpened():
     ret, frames = capture.read()
     if ret:
         out.write(frames)
     else:
         break
+```
+
+### Read and set image properties:  
+```python
+print(capture.get(3)) # print width of frame
+# cv2.CAP_PROP_FRAME_WIDTH = 3
+print(capture.get(4)) # print height of frame
+# cv2.CAP_PROP_FRAME_HEIGHT = 4
+
+capture.set(3, 1200) # => wil change to available default value i.e. 1280
+capture.set(4, 720) # => remain same 
 ```
 
 ### Draw or Write on image:  
