@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
-
+# pixel location on left-click
+# pixel BGR values on right-click
 
 def click_event(event, x, y, flags, params):
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -9,6 +10,8 @@ def click_event(event, x, y, flags, params):
         strXY = str(x) + ' ' + str(y)
         cv2.putText(img, strXY, (x,y), font, 0.5, (105,255,0), 2)
         cv2.imshow('image', img)
+        
+        
     if event == cv2.EVENT_RBUTTONDOWN:
         blue = img[x, y, 0]
         red = img[x, y, 1]
