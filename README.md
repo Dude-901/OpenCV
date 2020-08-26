@@ -58,3 +58,22 @@ while capture.isOpened():
     else:
         break
 ```
+
+### Draw or Write on image:  
+```python
+img = cv2.line(img, (0,0), (200,200), (227, 30, 112), 10) # simple line
+img = cv2.arrowedLine(img, (200,0), (200,200), (0, 70, 255), 10) # arrowed line
+
+img = cv2.rectangle(img, (200,300), (400,500), (227, 230, 112), 10) # rectangle
+img = cv2.circle(img, (300,400), 100, (0, 130, 112), -1) # circle
+# thickness = -1: means a solid filled color shape
+
+font = cv2.FONT_HERSHEY_SIMPLEX # font-style for the text
+img = cv2.putText(img, 'Dude', (200, 163), font, 4, (255,255,255), 5, cv2.LINE_4) # text on image
+```
+
+### create a black image:  
+```python
+img = np.zeros([512, 512, 3], np.uint8) # (height, width, 3), data_type
+```
+
