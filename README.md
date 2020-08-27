@@ -1,5 +1,4 @@
-# OpenCV
-My OpenCV learning notes and examples  
+# OpenCV (My OpenCV learning notes and examples)  
 ### Enter in command line:  
 >pip install opencv-python  
 
