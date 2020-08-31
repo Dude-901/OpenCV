@@ -9,7 +9,7 @@ import numpy as np
 img1 = np.zeros((250, 500, 3), np.uint8)
 img1 = cv2.rectangle(img1, (200, 0), (300,100), (255, 255, 255), -1)
 
-img2 = cv2.imread("black_and_white_rect.jpg")
+img2 = cv2.imread("image_1.png")
 cv2.imshow("image 1",img1)
 cv2.imshow("image 2",img2)
 
