@@ -1,6 +1,7 @@
 # OpenCV (My OpenCV learning notes and examples)  
-### Enter in command line:  
+### Install packages from command line:  
 >pip install opencv-python  
+pip install matplotlib
 
 ### check version:  
 >cv2.\_\_version\_\_  
